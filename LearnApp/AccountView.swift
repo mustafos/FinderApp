@@ -38,6 +38,11 @@ struct AccountView: View {
                     HexagonView()
                     .offset(x: -50, y: -100)
                 )
+                .background(
+                    AnimatedBlobView()
+                        .offset(x: 200, y: 0)
+                        .scaleEffect(0.6)
+                )
             Text("Mustafa Bekirov")
                 .font(.title.weight(.semibold))
             HStack {
