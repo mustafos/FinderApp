@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A4B9DF029BDEDD200E019C1 /* LearnAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B9DEF29BDEDD200E019C1 /* LearnAppApp.swift */; };
+		6A4B9DF029BDEDD200E019C1 /* LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B9DEF29BDEDD200E019C1 /* LearnApp.swift */; };
 		6A4B9DF229BDEDD200E019C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4B9DF129BDEDD200E019C1 /* ContentView.swift */; };
 		6A4B9DF429BDEDD400E019C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A4B9DF329BDEDD400E019C1 /* Assets.xcassets */; };
 		6A4B9DF729BDEDD400E019C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A4B9DF629BDEDD400E019C1 /* Preview Assets.xcassets */; };
@@ -16,12 +16,12 @@
 		6A78798829C4F8E7007578E4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A78798729C4F8E7007578E4 /* AccountView.swift */; };
 		6AAAF67B29C7A43200C9BA8B /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAAF67A29C7A43200C9BA8B /* HexagonView.swift */; };
 		6ABEF9DC29CCEAAB004FACE5 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABEF9DB29CCEAAB004FACE5 /* TabBar.swift */; };
-		6AF4310A29CA2E3600B28035 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4310929CA2E3600B28035 /* BlobView.swift */; };
+		6AF4310A29CA2E3600B28035 /* AnimatedBlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4310929CA2E3600B28035 /* AnimatedBlobView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A4B9DEC29BDEDD200E019C1 /* LearnApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A4B9DEF29BDEDD200E019C1 /* LearnAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAppApp.swift; sourceTree = "<group>"; };
+		6A4B9DEF29BDEDD200E019C1 /* LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnApp.swift; sourceTree = "<group>"; };
 		6A4B9DF129BDEDD200E019C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A4B9DF329BDEDD400E019C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A4B9DF629BDEDD400E019C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -30,7 +30,7 @@
 		6A78798729C4F8E7007578E4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		6AAAF67A29C7A43200C9BA8B /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		6ABEF9DB29CCEAAB004FACE5 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		6AF4310929CA2E3600B28035 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
+		6AF4310929CA2E3600B28035 /* AnimatedBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBlobView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +63,13 @@
 		6A4B9DEE29BDEDD200E019C1 /* LearnApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A4B9DEF29BDEDD200E019C1 /* LearnAppApp.swift */,
+				6A4B9DEF29BDEDD200E019C1 /* LearnApp.swift */,
 				6A4B9DF129BDEDD200E019C1 /* ContentView.swift */,
 				6A78798729C4F8E7007578E4 /* AccountView.swift */,
 				6ABEF9DB29CCEAAB004FACE5 /* TabBar.swift */,
 				6A71942C29CCF121008764CC /* Tab.swift */,
 				6AAAF67A29C7A43200C9BA8B /* HexagonView.swift */,
-				6AF4310929CA2E3600B28035 /* BlobView.swift */,
+				6AF4310929CA2E3600B28035 /* AnimatedBlobView.swift */,
 				6A78798529C4DF59007578E4 /* Styles.swift */,
 				6A4B9DF329BDEDD400E019C1 /* Assets.xcassets */,
 				6A4B9DF529BDEDD400E019C1 /* Preview Content */,
@@ -159,9 +159,9 @@
 				6AAAF67B29C7A43200C9BA8B /* HexagonView.swift in Sources */,
 				6A78798629C4DF59007578E4 /* Styles.swift in Sources */,
 				6A71942D29CCF121008764CC /* Tab.swift in Sources */,
-				6AF4310A29CA2E3600B28035 /* BlobView.swift in Sources */,
+				6AF4310A29CA2E3600B28035 /* AnimatedBlobView.swift in Sources */,
 				6A4B9DF229BDEDD200E019C1 /* ContentView.swift in Sources */,
-				6A4B9DF029BDEDD200E019C1 /* LearnAppApp.swift in Sources */,
+				6A4B9DF029BDEDD200E019C1 /* LearnApp.swift in Sources */,
 				6ABEF9DC29CCEAAB004FACE5 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

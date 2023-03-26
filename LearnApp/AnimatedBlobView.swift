@@ -1,5 +1,5 @@
 //
-//  BlobView.swift
+//  AnimatedBlobView.swift
 //  LearnApp
 //
 //  Created by Mustafa Bekirov on 21.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BlobView: View {
+struct AnimatedBlobView: View {
     @State var appear = false
     
     var body: some View {
@@ -39,8 +39,8 @@ struct BlobView: View {
     }
 }
 
-struct BlobView_Previews: PreviewProvider {
+struct AnimatedBlobView_Previews: PreviewProvider {
     static var previews: some View {
-        BlobView()
+        AnimatedBlobView()
     }
 }

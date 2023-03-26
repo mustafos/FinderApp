@@ -12,6 +12,9 @@ struct TabBar: View {
     @State var selectedX: CGFloat = 0
     @State var x: [CGFloat] = [0, 0, 0, 0]
     
+    @EnvironmentObject var model: Model
+    @AppStorage("selectedTab") var selectedTab: Tab = .home
+    
     var body: some View {
         GeometryReader { proxy in
             let hasHomeIndicator = proxy.safeAreaInsets.bottom > 0
@@ -38,16 +41,20 @@ struct TabBar: View {
                     .offset(x: selectedX)
                     .blendMode(.overlay)
             )
+            .backgroundStyle(cornerRadius: hasHomeIndicator ? 34 : 0)
             .frame(maxHeight: .infinity, alignment: .bottom)
             .ignoresSafeArea()
+            .offset(y: model.showTab ? 0 : 200)
+            .accessibility(hidden: !model.showTab)
         }
     }
     
     var content: some View {
-        ForEach<[_], ID, Any>(Array(unsafeUninitializedCapacity: tabItems.enumerated()), id: \.offset) { index, tab in
+        ForEach(Array(tabItems.enumerated()), id: \.offset) { index, tab in
             if index == 0 { Spacer() }
             
             Button {
+                selectedTab = tab.selection
                 withAnimation(.tabSelection) {
                     selectedX = x[index]
                     color = tab.color
@@ -62,8 +69,23 @@ struct TabBar: View {
                         .frame(width: 88)
                         .lineLimit(1)
                 }
+                .overlay(
+                    GeometryReader { proxy in
+                        let offset = proxy.frame(in: .global).minX
+                        Color.clear
+                            .preference(key: TabPreferenceKey.self, value: offset)
+                            .onPreferenceChange(TabPreferenceKey.self) { value in
+                                x[index] = value
+                                if selectedTab == tab.selection {
+                                    selectedX = x[index]
+                                }
+                            }
+                    }
+                )
             }
             .frame(width: 44)
+            .foregroundColor(selectedTab == tab.selection ? .primary : .secondary)
+            .blendMode(selectedTab == tab.selection ? .overlay : .normal)
             
             Spacer()
         }
