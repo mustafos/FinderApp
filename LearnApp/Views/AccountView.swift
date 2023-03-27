@@ -43,12 +43,12 @@ struct AccountView: View {
                         .offset(x: 200, y: 0)
                         .scaleEffect(0.6)
                 )
-            Text("Meng To")
+            Text("Mustafa Bekirov")
                 .font(.title.weight(.semibold))
             HStack {
                 Image(systemName: "location")
                     .imageScale(.large)
-                Text("Canada")
+                Text("Czechia")
                     .foregroundColor(.secondary)
             }
         }
@@ -76,7 +76,7 @@ struct AccountView: View {
     var links: some View {
         Section {
             if !isDeleted {
-                Link(destination: URL(string: "https://apple.com")!) {
+                Link(destination: URL(string: "https://mustafos.github.io")!) {
                     HStack {
                         Label("Website", systemImage: "house")
                         Spacer()
