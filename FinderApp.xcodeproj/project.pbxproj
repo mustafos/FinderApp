@@ -11,27 +11,7 @@
 		6A0DEEF92A1A93D100346391 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DEEF82A1A93D100346391 /* ContentView.swift */; };
 		6A0DEEFB2A1A93D200346391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0DEEFA2A1A93D200346391 /* Assets.xcassets */; };
 		6A0DEEFE2A1A93D200346391 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0DEEFD2A1A93D200346391 /* Preview Assets.xcassets */; };
-		6A0DEF082A1A93D200346391 /* FinderAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DEF072A1A93D200346391 /* FinderAppTests.swift */; };
-		6A0DEF122A1A93D200346391 /* FinderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DEF112A1A93D200346391 /* FinderAppUITests.swift */; };
-		6A0DEF142A1A93D200346391 /* FinderAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0DEF132A1A93D200346391 /* FinderAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6A0DEF042A1A93D200346391 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A0DEEEB2A1A93D100346391 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A0DEEF22A1A93D100346391;
-			remoteInfo = FinderApp;
-		};
-		6A0DEF0E2A1A93D200346391 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A0DEEEB2A1A93D100346391 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6A0DEEF22A1A93D100346391;
-			remoteInfo = FinderApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6A0DEEF32A1A93D100346391 /* FinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,29 +19,11 @@
 		6A0DEEF82A1A93D100346391 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6A0DEEFA2A1A93D200346391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A0DEEFD2A1A93D200346391 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6A0DEF032A1A93D200346391 /* FinderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A0DEF072A1A93D200346391 /* FinderAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderAppTests.swift; sourceTree = "<group>"; };
-		6A0DEF0D2A1A93D200346391 /* FinderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A0DEF112A1A93D200346391 /* FinderAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderAppUITests.swift; sourceTree = "<group>"; };
-		6A0DEF132A1A93D200346391 /* FinderAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6A27673B2A1A9F920095D443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6A0DEEF02A1A93D100346391 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A0DEF002A1A93D200346391 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A0DEF0A2A1A93D200346391 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,8 +37,6 @@
 			isa = PBXGroup;
 			children = (
 				6A0DEEF52A1A93D100346391 /* FinderApp */,
-				6A0DEF062A1A93D200346391 /* FinderAppTests */,
-				6A0DEF102A1A93D200346391 /* FinderAppUITests */,
 				6A0DEEF42A1A93D100346391 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				6A0DEEF32A1A93D100346391 /* FinderApp.app */,
-				6A0DEF032A1A93D200346391 /* FinderAppTests.xctest */,
-				6A0DEF0D2A1A93D200346391 /* FinderAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +52,7 @@
 		6A0DEEF52A1A93D100346391 /* FinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A27673B2A1A9F920095D443 /* Info.plist */,
 				6A0DEEF62A1A93D100346391 /* FinderAppApp.swift */,
 				6A0DEEF82A1A93D100346391 /* ContentView.swift */,
 				6A0DEEFA2A1A93D200346391 /* Assets.xcassets */,
@@ -108,23 +67,6 @@
 				6A0DEEFD2A1A93D200346391 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		6A0DEF062A1A93D200346391 /* FinderAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				6A0DEF072A1A93D200346391 /* FinderAppTests.swift */,
-			);
-			path = FinderAppTests;
-			sourceTree = "<group>";
-		};
-		6A0DEF102A1A93D200346391 /* FinderAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6A0DEF112A1A93D200346391 /* FinderAppUITests.swift */,
-				6A0DEF132A1A93D200346391 /* FinderAppUITestsLaunchTests.swift */,
-			);
-			path = FinderAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +89,6 @@
 			productReference = 6A0DEEF32A1A93D100346391 /* FinderApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6A0DEF022A1A93D200346391 /* FinderAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6A0DEF1A2A1A93D200346391 /* Build configuration list for PBXNativeTarget "FinderAppTests" */;
-			buildPhases = (
-				6A0DEEFF2A1A93D200346391 /* Sources */,
-				6A0DEF002A1A93D200346391 /* Frameworks */,
-				6A0DEF012A1A93D200346391 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6A0DEF052A1A93D200346391 /* PBXTargetDependency */,
-			);
-			name = FinderAppTests;
-			productName = FinderAppTests;
-			productReference = 6A0DEF032A1A93D200346391 /* FinderAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6A0DEF0C2A1A93D200346391 /* FinderAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6A0DEF1D2A1A93D200346391 /* Build configuration list for PBXNativeTarget "FinderAppUITests" */;
-			buildPhases = (
-				6A0DEF092A1A93D200346391 /* Sources */,
-				6A0DEF0A2A1A93D200346391 /* Frameworks */,
-				6A0DEF0B2A1A93D200346391 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6A0DEF0F2A1A93D200346391 /* PBXTargetDependency */,
-			);
-			name = FinderAppUITests;
-			productName = FinderAppUITests;
-			productReference = 6A0DEF0D2A1A93D200346391 /* FinderAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +101,6 @@
 				TargetAttributes = {
 					6A0DEEF22A1A93D100346391 = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					6A0DEF022A1A93D200346391 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 6A0DEEF22A1A93D100346391;
-					};
-					6A0DEF0C2A1A93D200346391 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 6A0DEEF22A1A93D100346391;
 					};
 				};
 			};
@@ -220,8 +118,6 @@
 			projectRoot = "";
 			targets = (
 				6A0DEEF22A1A93D100346391 /* FinderApp */,
-				6A0DEF022A1A93D200346391 /* FinderAppTests */,
-				6A0DEF0C2A1A93D200346391 /* FinderAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,20 +129,6 @@
 			files = (
 				6A0DEEFE2A1A93D200346391 /* Preview Assets.xcassets in Resources */,
 				6A0DEEFB2A1A93D200346391 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A0DEF012A1A93D200346391 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A0DEF0B2A1A93D200346391 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,37 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A0DEEFF2A1A93D200346391 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A0DEF082A1A93D200346391 /* FinderAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A0DEF092A1A93D200346391 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A0DEF142A1A93D200346391 /* FinderAppUITestsLaunchTests.swift in Sources */,
-				6A0DEF122A1A93D200346391 /* FinderAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6A0DEF052A1A93D200346391 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6A0DEEF22A1A93D100346391 /* FinderApp */;
-			targetProxy = 6A0DEF042A1A93D200346391 /* PBXContainerItemProxy */;
-		};
-		6A0DEF0F2A1A93D200346391 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6A0DEEF22A1A93D100346391 /* FinderApp */;
-			targetProxy = 6A0DEF0E2A1A93D200346391 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6A0DEF152A1A93D200346391 /* Debug */ = {
@@ -420,6 +272,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +302,7 @@
 				DEVELOPMENT_TEAM = 9PCQ5XC84W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,82 +318,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		6A0DEF1B2A1A93D200346391 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinderApp";
-			};
-			name = Debug;
-		};
-		6A0DEF1C2A1A93D200346391 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinderApp";
-			};
-			name = Release;
-		};
-		6A0DEF1E2A1A93D200346391 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FinderApp;
-			};
-			name = Debug;
-		};
-		6A0DEF1F2A1A93D200346391 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9PCQ5XC84W;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FinderApp;
 			};
 			name = Release;
 		};
@@ -560,24 +338,6 @@
 			buildConfigurations = (
 				6A0DEF182A1A93D200346391 /* Debug */,
 				6A0DEF192A1A93D200346391 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6A0DEF1A2A1A93D200346391 /* Build configuration list for PBXNativeTarget "FinderAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A0DEF1B2A1A93D200346391 /* Debug */,
-				6A0DEF1C2A1A93D200346391 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6A0DEF1D2A1A93D200346391 /* Build configuration list for PBXNativeTarget "FinderAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6A0DEF1E2A1A93D200346391 /* Debug */,
-				6A0DEF1F2A1A93D200346391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
