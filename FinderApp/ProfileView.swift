@@ -1,5 +1,5 @@
 //
-//  FinderAppApp.swift
+//  ProfileView.swift
 //  FinderApp
 //
 //  Created by Mustafa Bekirov on 21.05.2023.
@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-@main
-struct FinderAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            AppTabView()
-        }
+struct ProfileView: View {
+    var body: some View {
+        Text("Profile")
     }
+}
+
+#Preview {
+    ProfileView()
 }
