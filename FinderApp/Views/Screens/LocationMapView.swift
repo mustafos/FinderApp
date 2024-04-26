@@ -13,28 +13,25 @@ struct LocationMapView: View {
                                                    span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region)
-                .ignoresSafeArea()
+            Map(coordinateRegion: $region).ignoresSafeArea()
+            
             VStack {
-                HStack {
-                    Spacer()
-                    Image("ddg-map-logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 70)
-                        .shadow(radius: 10)
-                    Spacer()
-                }
-                .padding(.top, 50)
-                .background(Color.secondary)
-                
+                LogoView().shadow(radius: 10)
                 Spacer()
             }
-            .ignoresSafeArea()
         }
     }
 }
 
 #Preview {
     LocationMapView()
+}
+
+struct LogoView: View {
+    var body: some View {
+        Image("ddg-map-logo")
+            .resizable()
+            .scaledToFit()
+            .frame(height: 70)
+    }
 }

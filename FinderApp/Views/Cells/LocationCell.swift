@@ -1,45 +1,11 @@
 //
-//  LocationListView.swift
+//  LocationCell.swift
 //  FinderApp
 //
-//  Created by Mustafa Bekirov on 21.05.2023.
+//  Created by Mustafa Bekirov on 26.04.2024.
 //  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
 import SwiftUI
-
-struct LocationListView: View {
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(0..<10) { item in
-                    NavigationLink {
-                        LocationDetailView()
-                    } label: {
-                        LocationCell()
-                    }
-                }
-            }
-            .navigationTitle("Finder Spots")
-        }
-    }
-}
-
-#Preview {
-    LocationListView()
-}
-
-struct AvatarView: View {
-    
-    var size: CGFloat
-    
-    var body: some View {
-        Image("default-avatar")
-            .resizable()
-            .scaledToFit()
-            .frame(width: size, height: size)
-            .clipShape(Circle())
-    }
-}
 
 struct LocationCell: View {
     
@@ -69,4 +35,8 @@ struct LocationCell: View {
             .padding(.leading)
         }
     }
+}
+
+#Preview {
+    LocationCell()
 }

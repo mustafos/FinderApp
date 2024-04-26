@@ -14,26 +14,14 @@ struct LocationDetailView: View {
                    GridItem(.flexible())]
     var body: some View {
         VStack(spacing: 16) {
-            Image("default-banner-asset")
-                .resizable()
-                .scaledToFill()
-                .frame(height: 120)
+            BannerImageView(imageName: "default-banner-asset")
             
             HStack {
-                Label("123 Main Screen", systemImage: "mappin.and.ellipse")
-                    .font(.custom("AmericanTypewriter", size: 12, relativeTo: .caption))
-                    .foregroundColor(.secondary)
-                
+                AddressView(address: "123 Main Screen")
                 Spacer()
-            }
-            .padding(.horizontal)
+            }.padding(.horizontal)
             
-            Text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.")
-                .americanFont(size: 18, bold: false)
-                .lineLimit(3)
-                .minimumScaleFactor(0.75)
-                .frame(height: 70)
-                .padding(.horizontal)
+            DescriptionView(description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.")
             
             ZStack {
                 Capsule()
@@ -63,11 +51,9 @@ struct LocationDetailView: View {
                         LocationActionButton(color: .red, imageName: "person.fill.checkmark")
                     }
                 }
-            }
-            .padding(.horizontal)
+            }.padding(.horizontal)
             
-            Text("Who's Here?")
-                .americanFont(size: 20)
+            Text("Who's Here?").americanFont(size: 20)
             
             ScrollView {
                 LazyVGrid(columns: columns, content: {
@@ -124,5 +110,42 @@ struct FirstNameAvatarView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
         }
+    }
+}
+
+struct BannerImageView: View {
+    
+    var imageName: String
+    
+    var body: some View {
+        Image(imageName)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 120)
+    }
+}
+
+struct AddressView: View {
+    
+    var address: String
+    
+    var body: some View {
+        Label(address, systemImage: "mappin.and.ellipse")
+            .font(.custom("AmericanTypewriter", size: 12, relativeTo: .caption))
+            .foregroundColor(.secondary)
+    }
+}
+
+struct DescriptionView: View {
+    
+    var description: String
+    
+    var body: some View {
+        Text(description)
+            .americanFont(size: 18, bold: false)
+            .lineLimit(3)
+            .minimumScaleFactor(0.75)
+            .frame(height: 70)
+            .padding(.horizontal)
     }
 }
