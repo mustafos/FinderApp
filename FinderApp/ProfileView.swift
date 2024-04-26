@@ -37,16 +37,16 @@ struct ProfileView: View {
                     
                     VStack(spacing: 1) {
                         TextField("First Name", text: $firstName)
-                            .font(.system(size: 32, weight: .bold, design: .rounded))
+                            .font(.custom("AmericanTypewriter-Bold", size: 32))
                             .lineLimit(1)
                             .minimumScaleFactor(0.75)
                         
                         TextField("Last Name", text: $lastName)
-                            .font(.system(size: 32, weight: .bold, design: .rounded))
+                            .font(.custom("AmericanTypewriter-Bold", size: 32))
                             .lineLimit(1)
                             .minimumScaleFactor(0.75)
                         TextField("Company Name", text: $companyName)
-                            .font(.system(size: 32, weight: .bold, design: .rounded))
+                            .font(.custom("AmericanTypewriter", size: 28))
                             .lineLimit(1)
                             .minimumScaleFactor(0.75)
                     }
@@ -57,16 +57,15 @@ struct ProfileView: View {
             
             VStack(alignment: .leading, spacing: 6) {
                 Text("Bio:")
-                    .font(.callout)
+                    .font(.custom("AmericanTypewriter", size: 20, relativeTo: .callout))
                     .foregroundColor(.secondary)
                 +
                 Text(" \(100 - bio.count) ")
-                    .bold()
-                    .font(.callout)
+                    .font(.custom("AmericanTypewriter-Bold", size: 20, relativeTo: .callout))
                     .foregroundColor(bio.count <= 100 ? .brandPrimary : .red)
                 +
                 Text("Characters Remain")
-                    .font(.callout)
+                    .font(.custom("AmericanTypewriter", size: 20, relativeTo: .callout))
                     .foregroundColor(.secondary)
                 
                 TextEditor(text: $bio)
@@ -82,7 +81,7 @@ struct ProfileView: View {
                 // action
             } label: {
                 Text("Create Profile")
-                    .bold()
+                    .americanFont(size: 20)
                     .frame(width: 280, height: 44)
                     .background(Color.brandPrimary)
                     .foregroundColor(.white)

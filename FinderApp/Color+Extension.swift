@@ -1,5 +1,5 @@
 //
-//  Color+Ext.swift
+//  Color+Extension.swift
 //  FinderApp
 //
 //  Created by Mustafa Bekirov on 21.05.2023.

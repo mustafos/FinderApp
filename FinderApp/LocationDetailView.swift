@@ -2,7 +2,7 @@
 //  LocationDetailView.swift
 //  FinderApp
 //
-//  Created by Mustafa Bekirov on 22.04.2024.
+//  Created by Mustafa Bekirov on 22.04.2023.
 //  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct LocationDetailView: View {
             
             HStack {
                 Label("123 Main Screen", systemImage: "mappin.and.ellipse")
-                    .font(.caption)
+                    .font(.custom("AmericanTypewriter", size: 12, relativeTo: .caption))
                     .foregroundColor(.secondary)
                 
                 Spacer()
@@ -29,6 +29,7 @@ struct LocationDetailView: View {
             .padding(.horizontal)
             
             Text("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.")
+                .americanFont(size: 18, bold: false)
                 .lineLimit(3)
                 .minimumScaleFactor(0.75)
                 .frame(height: 70)
@@ -66,8 +67,7 @@ struct LocationDetailView: View {
             .padding(.horizontal)
             
             Text("Who's Here?")
-                .bold()
-                .font(.title2)
+                .americanFont(size: 20)
             
             ScrollView {
                 LazyVGrid(columns: columns, content: {
@@ -120,7 +120,7 @@ struct FirstNameAvatarView: View {
             AvatarView(size: 64)
             
             Text(firstName)
-                .bold()
+                .americanFont(size: 18)
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
         }

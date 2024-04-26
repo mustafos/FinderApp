@@ -54,8 +54,7 @@ struct LocationCell: View {
             
             VStack(alignment: .leading) {
                 Text("Test Location Name")
-                    .font(.title2)
-                    .fontWeight(.semibold)
+                    .americanFont(size: 21)
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                 
