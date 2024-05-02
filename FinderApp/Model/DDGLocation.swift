@@ -8,7 +8,6 @@
 import CloudKit
 
 struct DDGLocation {
-    
     static let kName        = "name"
     static let kDescription = "description"
     static let kSquareAsset = "squareAsset"
