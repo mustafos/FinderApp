@@ -23,13 +23,6 @@ struct CloudKitManager {
             
             let locations = records.map { $0.convertToDDGLocation() }
             
-//            var locations: [DDGLocation] = []
-//            
-//            for record in records {
-//                let location = DDGLocation(record: record)
-//                locations.append(location)
-//            }
-            
             completed(.success(locations))
         }
     }
