@@ -20,6 +20,7 @@
 		6A5522712BE23EEF00E73FB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5522702BE23EEF00E73FB6 /* Constants.swift */; };
 		6A5522732BE2426200E73FB6 /* CKRecord+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5522722BE2426200E73FB6 /* CKRecord+Extension.swift */; };
 		6A63F4E92BE6B75D0050A78D /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63F4E82BE6B75D0050A78D /* AlertItem.swift */; };
+		6A63F4EC2BE6BCC70050A78D /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A63F4EB2BE6BCC70050A78D /* LocationMapViewModel.swift */; };
 		6A648D862BD9B584005BB3EE /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A648D852BD9B584005BB3EE /* Text+Extension.swift */; };
 		6A677EA62BDED56F0051C644 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A677EA52BDED56F0051C644 /* DDGLocation.swift */; };
 		6A677EA82BDEDF080051C644 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A677EA72BDEDF080051C644 /* DDGProfile.swift */; };
@@ -48,6 +49,7 @@
 		6A5522702BE23EEF00E73FB6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6A5522722BE2426200E73FB6 /* CKRecord+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Extension.swift"; sourceTree = "<group>"; };
 		6A63F4E82BE6B75D0050A78D /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		6A63F4EB2BE6BCC70050A78D /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		6A648D852BD9B584005BB3EE /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		6A677EA52BDED56F0051C644 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		6A677EA72BDEDF080051C644 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
@@ -120,6 +122,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		6A63F4EA2BE6BCB30050A78D /* LocationMapView */ = {
+			isa = PBXGroup;
+			children = (
+				6A11EBA12BD5A82600F626EE /* LocationMapView.swift */,
+				6A63F4EB2BE6BCC70050A78D /* LocationMapViewModel.swift */,
+			);
+			path = LocationMapView;
+			sourceTree = "<group>";
+		};
 		6A677EA42BDED55F0051C644 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +166,8 @@
 		6A9817182BDC294F007891EE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6A63F4EA2BE6BCB30050A78D /* LocationMapView */,
 				6A11EB9F2BD5A7F900F626EE /* AppTabView.swift */,
-				6A11EBA12BD5A82600F626EE /* LocationMapView.swift */,
 				6A526A182BD7042E00F81E2A /* LocationDetailView.swift */,
 				6A11EBA52BD5A85500F626EE /* ProfileView.swift */,
 				6A11EBA32BD5A83F00F626EE /* LocationListView.swift */,
@@ -258,6 +269,7 @@
 				6A55226F2BE23E0700E73FB6 /* CloudKitManager.swift in Sources */,
 				6A11EBA22BD5A82600F626EE /* LocationMapView.swift in Sources */,
 				6A11EBA42BD5A83F00F626EE /* LocationListView.swift in Sources */,
+				6A63F4EC2BE6BCC70050A78D /* LocationMapViewModel.swift in Sources */,
 				6A526A192BD7042E00F81E2A /* LocationDetailView.swift in Sources */,
 				6A11EBA02BD5A7F900F626EE /* AppTabView.swift in Sources */,
 				6A98170F2BDC1FC7007891EE /* LocationCell.swift in Sources */,
@@ -417,6 +429,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,6 +464,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mustafos.FinderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
