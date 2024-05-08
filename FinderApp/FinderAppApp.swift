@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FinderAppApp: App {
+    
+    let locationManager = LocationManager()
+    
     var body: some Scene {
         WindowGroup {
-            AppTabView()
+            AppTabView().environmentObject(locationManager)
         }
     }
 }

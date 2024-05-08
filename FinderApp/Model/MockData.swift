@@ -9,12 +9,12 @@ import CloudKit
 
 struct MockData {
     static var location: CKRecord {
-        let record = CKRecord(recordType: RecordType.location)
-        record[DDGLocation.kName] = "Musafer"
-        record[DDGLocation.kAddress] = "Mira 20"
+        let record                       = CKRecord(recordType: RecordType.location)
+        record[DDGLocation.kName]        = "Musafer"
+        record[DDGLocation.kAddress]     = "Mira 20"
         record[DDGLocation.kDescription] = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-        record[DDGLocation.kWebsiteURL] = "https://mustafos.github.io"
-        record[DDGLocation.kLocation] = CLLocation(latitude: 49.747438, longitude: 13.377562)
+        record[DDGLocation.kWebsiteURL]  = "https://mustafos.github.io"
+        record[DDGLocation.kLocation]    = CLLocation(latitude: 49.747438, longitude: 13.377562)
         record[DDGLocation.kPhoneNumber] = "377 560 789"
         
         return record
