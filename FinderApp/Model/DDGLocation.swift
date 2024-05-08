@@ -5,6 +5,7 @@
 //  Created by Mustafa Bekirov on 28.04.2024.
 //  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
+import UIKit
 import CloudKit
 
 struct DDGLocation: Identifiable {
@@ -37,5 +38,15 @@ struct DDGLocation: Identifiable {
         location    = record[DDGLocation.kLocation] as? CLLocation ?? CLLocation(latitude: 49.747438, longitude: 13.377562)
         websiteURL  = record[DDGLocation.kWebsiteURL] as? String ?? "N/A"
         phoneNumber = record[DDGLocation.kPhoneNumber] as? String ?? "N/A"
+    }
+    
+    func createSquareImage() -> UIImage {
+        guard let asset = squareAsset else { return PlaceholderImage.square }
+        return asset.convertToUIImage(in: .square)
+    }
+    
+    func createBannerImage() -> UIImage {
+        guard let asset = bannerAsset else { return PlaceholderImage.banner }
+        return asset.convertToUIImage(in: .banner)
     }
 }
