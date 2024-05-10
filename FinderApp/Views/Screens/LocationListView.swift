@@ -10,18 +10,22 @@ import SwiftUI
 struct LocationListView: View {
     
     @EnvironmentObject private var locationManager: LocationManager
-    
+    @State private var selectedTab: String = "building"
     var body: some View {
         NavigationView {
-            List {
-                ForEach(locationManager.locations) { location in
-                    NavigationLink {
-                        LocationDetailView(location: location)
-                    } label: {
-                        LocationCell(location: location)
+            ZStack(alignment: .bottom) {
+                Color("brandSelego").ignoresSafeArea()
+                List {
+                    ForEach(locationManager.locations) { location in
+                        NavigationLink {
+                            LocationDetailView(location: location)
+                        } label: {
+                            LocationCell(location: location)
+                        }
                     }
-                }
-            }.navigationTitle("Finder Spots")
+                }.navigationTitle("Finder Spots")
+                CustomTabBar(selectedTab: $selectedTab)
+            }
         }
     }
 }
