@@ -8,32 +8,24 @@
 import SwiftUI
 
 struct AppTabView: View {
-    var body: some View {
-//        ZStack(alignment: .bottom) {
-//            Color("brandSelego")
-            LocationMapView()
-//        }
-//        TabView {
-//            LocationMapView()
-//                .tabItem {
-//                    Label("Map", systemImage: "map")
-//                }
-//            LocationListView()
-//                .tabItem {
-//                    Label("Locations", systemImage: "building")
-//                }
-//            
-//            NavigationView {
-//                ProfileView()
-//            }
-//            .tabItem {
-//                Label("Profile", systemImage: "person")
-//            }
-//        }
-//        .accentColor(.brandPrimary)
-    }
-}
 
-#Preview {
-    AppTabView()
+    var body: some View {
+        TabView {
+            LocationMapView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+            LocationListView()
+                .tabItem {
+                    Label("Locations", systemImage: "building")
+                }
+            
+            NavigationView {
+                ProfileView()
+            }
+            .tabItem {
+                Label("Profile", systemImage: "person")
+            }
+        }
+    }
 }

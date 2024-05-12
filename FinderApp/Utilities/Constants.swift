@@ -30,3 +30,5 @@ enum ImageDimension {
         }
     }
 }
+
+let feedback = UIImpactFeedbackGenerator(style: .soft)

@@ -13,50 +13,45 @@ struct ProfileView: View {
     @State private var lastName: String = ""
     @State private var companyName: String = ""
     @State private var bio: String = ""
-    @State private var selectedTab: String = "person"
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Color("brandSelego").ignoresSafeArea()
-            VStack {
-                ZStack {
-                    NameBackgroundView()
+        VStack {
+            ZStack {
+                NameBackgroundView()
+                
+                HStack(spacing: 16) {
+                    ZStack {
+                        AvatarView(size: 84)
+                        EditImage()
+                    }.padding(.leading, 12)
                     
-                    HStack(spacing: 16) {
-                        ZStack {
-                            AvatarView(size: 84)
-                            EditImage()
-                        }.padding(.leading, 12)
+                    VStack(spacing: 1) {
+                        TextField("First Name", text: $firstName)
+                            .profileNameStyle()
                         
-                        VStack(spacing: 1) {
-                            TextField("First Name", text: $firstName)
-                                .profileNameStyle()
-                            
-                            TextField("Last Name", text: $lastName)
-                                .profileNameStyle()
-                            
-                            TextField("Company Name", text: $companyName)
-                                .font(.custom("AmericanTypewriter", size: 18))
-                        }.padding(.trailing, 16)
-                    }.padding()
-                }
-                
-                VStack(alignment: .leading, spacing: 6) {
-                    CharacterRemainView(currentCount: bio.count)
-                    TextEditor(text: $bio)
-                        .frame(height: 100)
-                        .overlay(RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.secondary, lineWidth: 1))
-                }.padding(.horizontal, 20)
-                
-                Spacer()
-                
-                Button {} label: {
-                    FinderButton(title: "Create Profile")
-                }
-            }.navigationTitle("Profile")
-            CustomTabBar(selectedTab: $selectedTab)
-        }
+                        TextField("Last Name", text: $lastName)
+                            .profileNameStyle()
+                        
+                        TextField("Company Name", text: $companyName)
+                            .font(.custom("AmericanTypewriter", size: 18))
+                    }.padding(.trailing, 16)
+                }.padding()
+            }
+            
+            VStack(alignment: .leading, spacing: 6) {
+                CharacterRemainView(currentCount: bio.count)
+                TextEditor(text: $bio)
+                    .frame(height: 100)
+                    .overlay(RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1))
+            }.padding(.horizontal, 20)
+            
+            Spacer()
+            
+            Button {} label: {
+                FinderButton(title: "Create Profile")
+            }
+        }.navigationTitle("Profile")
     }
 }
 

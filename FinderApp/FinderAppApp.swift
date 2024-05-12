@@ -14,7 +14,8 @@ struct FinderAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AppTabView().environmentObject(locationManager)
+            AppTabView()
+                .environmentObject(locationManager)
         }
     }
 }
