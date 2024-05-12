@@ -25,6 +25,9 @@
 		6A677EA62BDED56F0051C644 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A677EA52BDED56F0051C644 /* DDGLocation.swift */; };
 		6A677EA82BDEDF080051C644 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A677EA72BDEDF080051C644 /* DDGProfile.swift */; };
 		6A677EAA2BDEE1B70051C644 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A677EA92BDEE1B70051C644 /* MockData.swift */; };
+		6A8867362BF0E9870024BDB6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8867352BF0E9870024BDB6 /* OnboardingView.swift */; };
+		6A8867382BF0E9FE0024BDB6 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8867372BF0E9FE0024BDB6 /* LogoView.swift */; };
+		6A88673B2BF0EFA50024BDB6 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A88673A2BF0EFA50024BDB6 /* XDismissButton.swift */; };
 		6A98170D2BDC1CCF007891EE /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98170C2BDC1CCF007891EE /* AvatarView.swift */; };
 		6A98170F2BDC1FC7007891EE /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98170E2BDC1FC7007891EE /* LocationCell.swift */; };
 		6A9817112BDC23F1007891EE /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9817102BDC23F1007891EE /* CustomModifiers.swift */; };
@@ -56,6 +59,9 @@
 		6A677EA52BDED56F0051C644 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		6A677EA72BDEDF080051C644 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
 		6A677EA92BDEE1B70051C644 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		6A8867352BF0E9870024BDB6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6A8867372BF0E9FE0024BDB6 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		6A88673A2BF0EFA50024BDB6 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		6A98170C2BDC1CCF007891EE /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		6A98170E2BDC1FC7007891EE /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		6A9817102BDC23F1007891EE /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
@@ -154,6 +160,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		6A8867392BF0EF920024BDB6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6A9817142BDC2606007891EE /* FinderButton.swift */,
+				6A88673A2BF0EFA50024BDB6 /* XDismissButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		6A9817162BDC2911007891EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +200,7 @@
 				6A526A182BD7042E00F81E2A /* LocationDetailView.swift */,
 				6A11EBA52BD5A85500F626EE /* ProfileView.swift */,
 				6A11EBA32BD5A83F00F626EE /* LocationListView.swift */,
+				6A8867352BF0E9870024BDB6 /* OnboardingView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -200,8 +216,9 @@
 		6A98171A2BDC29E8007891EE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				6A8867392BF0EF920024BDB6 /* Buttons */,
 				6A98170C2BDC1CCF007891EE /* AvatarView.swift */,
-				6A9817142BDC2606007891EE /* FinderButton.swift */,
+				6A8867372BF0E9FE0024BDB6 /* LogoView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -277,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A648D862BD9B584005BB3EE /* Text+Extension.swift in Sources */,
+				6A88673B2BF0EFA50024BDB6 /* XDismissButton.swift in Sources */,
 				6A0DEEF72A1A93D100346391 /* FinderAppApp.swift in Sources */,
 				6A677EA62BDED56F0051C644 /* DDGLocation.swift in Sources */,
 				6A677EA82BDEDF080051C644 /* DDGProfile.swift in Sources */,
@@ -296,7 +314,9 @@
 				6A677EAA2BDEE1B70051C644 /* MockData.swift in Sources */,
 				6A9817132BDC2455007891EE /* View+Extension.swift in Sources */,
 				6A11EB9E2BD5A79100F626EE /* Color+Extension.swift in Sources */,
+				6A8867382BF0E9FE0024BDB6 /* LogoView.swift in Sources */,
 				6A5522732BE2426200E73FB6 /* CKRecord+Extension.swift in Sources */,
+				6A8867362BF0E9870024BDB6 /* OnboardingView.swift in Sources */,
 				6A5522712BE23EEF00E73FB6 /* Constants.swift in Sources */,
 				6AFC22942BEC0D3F00D97E2C /* CKAsset+Extension.swift in Sources */,
 			);

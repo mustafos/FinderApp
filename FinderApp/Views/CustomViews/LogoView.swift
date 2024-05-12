@@ -3,16 +3,18 @@
 //  FinderApp
 //
 //  Created by Mustafa Bekirov on 12.05.2024.
-//
+//  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
 import SwiftUI
 
 struct LogoView: View {
+    
+    var frameWidth: CGFloat
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("ddg-map-logo")
+            .resizable()
+            .scaledToFit()
+            .frame(height: frameWidth)
     }
-}
-
-#Preview {
-    LogoView()
 }
