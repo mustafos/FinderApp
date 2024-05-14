@@ -24,7 +24,3 @@ struct LocationListView: View {
         }
     }
 }
-
-#Preview {
-    LocationListView()
-}

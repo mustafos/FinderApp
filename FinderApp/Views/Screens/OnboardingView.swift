@@ -3,20 +3,23 @@
 //  FinderApp
 //
 //  Created by Mustafa Bekirov on 12.05.2024.
-//
+//  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isShowingOnboardView: Bool
+    
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 Button {
-                    
+                    isShowingOnboardView = false
                 } label: {
                     XDismissButton()
                 }
+                .padding()
             }
             
             Spacer()
@@ -40,10 +43,6 @@ struct OnboardingView: View {
             Spacer()
         }
     }
-}
-
-#Preview {
-    OnboardingView()
 }
 
 struct OnboardInfoView: View {
