@@ -15,6 +15,7 @@
 		6A11EBA22BD5A82600F626EE /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA12BD5A82600F626EE /* LocationMapView.swift */; };
 		6A11EBA42BD5A83F00F626EE /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA32BD5A83F00F626EE /* LocationListView.swift */; };
 		6A11EBA62BD5A85500F626EE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA52BD5A85500F626EE /* ProfileView.swift */; };
+		6A2690C72BF4DFB200993A95 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2690C62BF4DFB200993A95 /* PhotoPicker.swift */; };
 		6A526A192BD7042E00F81E2A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A526A182BD7042E00F81E2A /* LocationDetailView.swift */; };
 		6A55226F2BE23E0700E73FB6 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55226E2BE23E0700E73FB6 /* CloudKitManager.swift */; };
 		6A5522712BE23EEF00E73FB6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5522702BE23EEF00E73FB6 /* Constants.swift */; };
@@ -48,6 +49,7 @@
 		6A11EBA12BD5A82600F626EE /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		6A11EBA32BD5A83F00F626EE /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		6A11EBA52BD5A85500F626EE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		6A2690C62BF4DFB200993A95 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		6A27673B2A1A9F920095D443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A526A182BD7042E00F81E2A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		6A55226E2BE23E0700E73FB6 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 				6A0DEEFD2A1A93D200346391 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6A2690C52BF4DF8A00993A95 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				6A2690C62BF4DFB200993A95 /* PhotoPicker.swift */,
+			);
+			path = "UIKit Components";
 			sourceTree = "<group>";
 		};
 		6A55226D2BE23DCA00E73FB6 /* Utilities */ = {
@@ -216,6 +226,7 @@
 		6A98171A2BDC29E8007891EE /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				6A2690C52BF4DF8A00993A95 /* UIKit Components */,
 				6A8867392BF0EF920024BDB6 /* Buttons */,
 				6A98170C2BDC1CCF007891EE /* AvatarView.swift */,
 				6A8867372BF0E9FE0024BDB6 /* LogoView.swift */,
@@ -313,6 +324,7 @@
 				6A9817112BDC23F1007891EE /* CustomModifiers.swift in Sources */,
 				6A677EAA2BDEE1B70051C644 /* MockData.swift in Sources */,
 				6A9817132BDC2455007891EE /* View+Extension.swift in Sources */,
+				6A2690C72BF4DFB200993A95 /* PhotoPicker.swift in Sources */,
 				6A11EB9E2BD5A79100F626EE /* Color+Extension.swift in Sources */,
 				6A8867382BF0E9FE0024BDB6 /* LogoView.swift in Sources */,
 				6A5522732BE2426200E73FB6 /* CKRecord+Extension.swift in Sources */,
