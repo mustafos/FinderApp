@@ -15,6 +15,7 @@
 		6A11EBA22BD5A82600F626EE /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA12BD5A82600F626EE /* LocationMapView.swift */; };
 		6A11EBA42BD5A83F00F626EE /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA32BD5A83F00F626EE /* LocationListView.swift */; };
 		6A11EBA62BD5A85500F626EE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11EBA52BD5A85500F626EE /* ProfileView.swift */; };
+		6A14BA922BF9398B0034B5D5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A14BA912BF9398B0034B5D5 /* ProfileViewModel.swift */; };
 		6A2690C72BF4DFB200993A95 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2690C62BF4DFB200993A95 /* PhotoPicker.swift */; };
 		6A526A192BD7042E00F81E2A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A526A182BD7042E00F81E2A /* LocationDetailView.swift */; };
 		6A55226F2BE23E0700E73FB6 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55226E2BE23E0700E73FB6 /* CloudKitManager.swift */; };
@@ -50,6 +51,7 @@
 		6A11EBA12BD5A82600F626EE /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		6A11EBA32BD5A83F00F626EE /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		6A11EBA52BD5A85500F626EE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		6A14BA912BF9398B0034B5D5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		6A2690C62BF4DFB200993A95 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		6A27673B2A1A9F920095D443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A526A182BD7042E00F81E2A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,15 @@
 				6A0DEEFD2A1A93D200346391 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6A14BA902BF939710034B5D5 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				6A11EBA52BD5A85500F626EE /* ProfileView.swift */,
+				6A14BA912BF9398B0034B5D5 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		6A2690C52BF4DF8A00993A95 /* UIKit Components */ = {
@@ -208,10 +219,10 @@
 		6A9817182BDC294F007891EE /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6A14BA902BF939710034B5D5 /* ProfileView */,
 				6A63F4EA2BE6BCB30050A78D /* LocationMapView */,
 				6A11EB9F2BD5A7F900F626EE /* AppTabView.swift */,
 				6A526A182BD7042E00F81E2A /* LocationDetailView.swift */,
-				6A11EBA52BD5A85500F626EE /* ProfileView.swift */,
 				6A11EBA32BD5A83F00F626EE /* LocationListView.swift */,
 				6A8867352BF0E9870024BDB6 /* OnboardingView.swift */,
 			);
@@ -309,6 +320,7 @@
 			files = (
 				6A648D862BD9B584005BB3EE /* Text+Extension.swift in Sources */,
 				6A88673B2BF0EFA50024BDB6 /* XDismissButton.swift in Sources */,
+				6A14BA922BF9398B0034B5D5 /* ProfileViewModel.swift in Sources */,
 				6A0DEEF72A1A93D100346391 /* FinderAppApp.swift in Sources */,
 				6A677EA62BDED56F0051C644 /* DDGLocation.swift in Sources */,
 				6A677EA82BDEDF080051C644 /* DDGProfile.swift in Sources */,

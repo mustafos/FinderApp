@@ -10,13 +10,7 @@ import CloudKit
 
 struct ProfileView: View {
     
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
-    @State private var companyName: String = ""
-    @State private var bio: String = ""
-    @State private var avatar = PlaceholderImage.avatar
-    @State private var isShowPhotoPicker: Bool = false
-    @State private var alertItem: AlertItem?
+    @StateObject private var viewModel = ProfileViewModel()
     
     var body: some View {
         VStack {
@@ -25,28 +19,25 @@ struct ProfileView: View {
                 
                 HStack(spacing: 16) {
                     ZStack {
-                        AvatarView(image: avatar, size: 84)
+                        AvatarView(image: viewModel.avatar, size: 84)
                         EditImage()
                     }
                     .padding(.leading, 12)
-                    .onTapGesture { isShowPhotoPicker = true }
+                    .onTapGesture { viewModel.isShowPhotoPicker.toggle() }
                     
                     VStack(spacing: 1) {
-                        TextField("First Name", text: $firstName)
-                            .profileNameStyle()
-                        
-                        TextField("Last Name", text: $lastName)
-                            .profileNameStyle()
-                        
-                        TextField("Company Name", text: $companyName)
+                        TextField("First Name", text: $viewModel.firstName).profileNameStyle()
+                        TextField("Last Name", text: $viewModel.lastName).profileNameStyle()
+                        TextField("Company Name", text: $viewModel.companyName)
                             .font(.custom("AmericanTypewriter", size: 18))
                     }.padding(.trailing, 16)
                 }.padding()
             }
             
             VStack(alignment: .leading, spacing: 6) {
-                CharacterRemainView(currentCount: bio.count)
-                TextEditor(text: $bio)
+                CharacterRemainView(currentCount: viewModel.bio.count)
+                
+                TextEditor(text: $viewModel.bio)
                     .frame(height: 100)
                     .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
@@ -55,7 +46,7 @@ struct ProfileView: View {
             Spacer()
             
             Button {
-                createProfile()
+                viewModel.createProfile()
             } label: {
                 FinderButton(title: "Create Profile")
             }
@@ -69,98 +60,12 @@ struct ProfileView: View {
                 Image(systemName: "keyboard.chevron.compact.down")
             }
         }
-        .onAppear { getProfile() }
-        .alert(item: $alertItem, content: { alertItem in
+        .onAppear { viewModel.getProfile() }
+        .alert(item: $viewModel.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
-        .sheet(isPresented: $isShowPhotoPicker) {
-            PhotoPicker(image: $avatar)
-        }
-    }
-    
-    func isValidProfile() -> Bool {
-        
-        guard !firstName.isEmpty,
-              !lastName.isEmpty,
-              !companyName.isEmpty,
-              !bio.isEmpty,
-              avatar != PlaceholderImage.avatar,
-              bio.count < 100 else { return false }
-        
-        return true
-    }
-    
-    func createProfile() -> Void {
-        guard isValidProfile() else {
-            alertItem = AlertContext.invalidProfile
-            return
-        }
-        let profileRecord = CKRecord(recordType: RecordType.profile)
-        profileRecord[DDGProfile.kFirstName] = firstName
-        profileRecord[DDGProfile.kLastName] = lastName
-        profileRecord[DDGProfile.kCompanyName] = companyName
-        profileRecord[DDGProfile.kBio] = bio
-        profileRecord[DDGProfile.kAvatar] = avatar.convertToCKAsset()
-        
-        CKContainer.default().fetchUserRecordID { recordID, error in
-            guard let recordID = recordID, error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
-                guard let userRecord = userRecord, error == nil else {
-                    print(error!.localizedDescription)
-                    return
-                }
-                userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
-                let operation = CKModifyRecordsOperation(recordsToSave: [userRecord, profileRecord])
-                
-                operation.modifyRecordsCompletionBlock = { savedRecords, _, error in
-                    guard let savedRecords = savedRecords, error == nil else {
-                        print(error!.localizedDescription)
-                        return
-                    }
-                    print(savedRecords)
-                }
-                
-                CKContainer.default().publicCloudDatabase.add(operation)
-            }
-        }
-    }
-    
-    func getProfile() -> Void {
-        CKContainer.default().fetchUserRecordID { recordID, error in
-            guard let recordID = recordID, error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            CKContainer.default().publicCloudDatabase.fetch(withRecordID: recordID) { userRecord, error in
-                guard let userRecord = userRecord, error == nil else {
-                    print(error!.localizedDescription)
-                    return
-                }
-                
-                let profileReference = userRecord["userProfile"] as! CKRecord.Reference
-                let profileRecordID = profileReference.recordID
-                
-                CKContainer.default().publicCloudDatabase.fetch(withRecordID: profileRecordID) { profileRecord, error in
-                    guard let profileRecord = profileRecord, error == nil else {
-                        print(error!.localizedDescription)
-                        return
-                    }
-                    
-                    DispatchQueue.main.async {
-                        let profile = DDGProfile(record: profileRecord)
-                        firstName = profile.firstName
-                        lastName = profile.lastName
-                        companyName = profile.companyName
-                        bio = profile.bio
-                        avatar = profile.createAvatarImage()
-                    }
-                }
-            }
+        .sheet(isPresented: $viewModel.isShowPhotoPicker) {
+            PhotoPicker(image: $viewModel.avatar)
         }
     }
 }
