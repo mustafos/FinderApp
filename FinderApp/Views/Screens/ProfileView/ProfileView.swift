@@ -47,9 +47,9 @@ struct ProfileView: View {
                 Spacer()
                 
                 Button {
-                    viewModel.createProfile()
+                    viewModel.profileContext == .create ? viewModel.createProfile() : viewModel.updateProfile()
                 } label: {
-                    FinderButton(title: "Create Profile")
+                    FinderButton(title: viewModel.profileContext == .create ? "Create Profile" : "Update Profile")
                 }
                 .padding(.bottom)
             }

@@ -52,4 +52,12 @@ struct AlertContext {
     static let unabelToGetProfile = AlertItem(title: Text("Unable to Retrieve Profile"),
                                               message: Text("We were unable to retrieve your profile at this time.\nPlease try again later of contact customer support if this persists."),
                                               dismissButton: .default(Text("OK")))
+    
+    static let updateProfileSuccess = AlertItem(title: Text("Profile Update Success!"),
+                                              message: Text("Your Finder profile was updated successfully"),
+                                              dismissButton: .default(Text("Sweet!")))
+    
+    static let updateProfileFailure = AlertItem(title: Text("Profile Update Faild!"),
+                                              message: Text("We were unable to update your profile at this moment. \nPlease try again later."),
+                                              dismissButton: .default(Text("Sweet!")))
 }
