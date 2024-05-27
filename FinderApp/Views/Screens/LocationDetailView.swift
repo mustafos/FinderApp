@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct LocationDetailView: View {
-    
+    var location: DDGLocation
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
                    GridItem(.flexible())]
+    
     var body: some View {
         VStack(spacing: 16) {
-            BannerImageView(imageName: "default-banner-asset")
+            BannerImageView(image: location.createBannerImage())
             
             HStack {
-                AddressView(address: "123 Main Screen")
+                AddressView(address: location.address)
                 Spacer()
             }.padding(.horizontal)
             
-            DescriptionView(description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.")
+            DescriptionView(description: location.description)
             
             ZStack {
                 Capsule()
@@ -35,7 +36,7 @@ struct LocationDetailView: View {
                         LocationActionButton(color: .brandPrimary, imageName: "location.fill")
                     }
                     
-                    Link(destination: URL(string: "https://www.apple.com")!, label: {
+                    Link(destination: URL(string: location.websiteURL)!, label: {
                         LocationActionButton(color: .brandPrimary, imageName: "network")
                     })
                     
@@ -57,25 +58,25 @@ struct LocationDetailView: View {
             
             ScrollView {
                 LazyVGrid(columns: columns, content: {
-                    FirstNameAvatarView(firstName: "Mustafa")
-                    FirstNameAvatarView(firstName: "Kelly")
-                    FirstNameAvatarView(firstName: "Arnold")
-                    FirstNameAvatarView(firstName: "Sean")
-                    FirstNameAvatarView(firstName: "Jack")
-                    FirstNameAvatarView(firstName: "Brian")
-                    FirstNameAvatarView(firstName: "Smit")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Mustafa")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Kelly")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Arnold")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Sean")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Jack")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Brian")
+                    FirstNameAvatarView(image: PlaceholderImage.avatar, firstName: "Smit")
                 })
             }
             Spacer()
         }
-        .navigationTitle("Location Name")
+        .navigationTitle(location.name)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
     NavigationView {
-        LocationDetailView()
+        LocationDetailView(location: DDGLocation(record: MockData.location))
     }
 }
 
@@ -100,10 +101,11 @@ struct LocationActionButton: View {
 }
 
 struct FirstNameAvatarView: View {
+    var image: UIImage
     var firstName: String
     var body: some View {
         VStack {
-            AvatarView(size: 64)
+            AvatarView(image: image, size: 64)
             
             Text(firstName)
                 .americanFont(size: 18)
@@ -115,10 +117,10 @@ struct FirstNameAvatarView: View {
 
 struct BannerImageView: View {
     
-    var imageName: String
+    var image: UIImage
     
     var body: some View {
-        Image(imageName)
+        Image(uiImage: image)
             .resizable()
             .scaledToFill()
             .frame(height: 120)

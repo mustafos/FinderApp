@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct LocationListView: View {
+    @EnvironmentObject private var locationManager: LocationManager
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(0..<10) { item in
+                ForEach(locationManager.locations) { location in
                     NavigationLink {
-                        LocationDetailView()
+                        LocationDetailView(location: location)
                     } label: {
-                        LocationCell()
+                        LocationCell(location: location)
                     }
                 }
             }.navigationTitle("Finder Spots")
         }
     }
-}
-
-#Preview {
-    LocationListView()
 }
