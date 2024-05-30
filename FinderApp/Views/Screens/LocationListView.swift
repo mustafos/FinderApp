@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocationListView: View {
+    
     @EnvironmentObject private var locationManager: LocationManager
     
     var body: some View {
@@ -15,7 +16,7 @@ struct LocationListView: View {
             List {
                 ForEach(locationManager.locations) { location in
                     NavigationLink {
-                        LocationDetailView(location: location)
+                        LocationDetailView(viewModel: LocationDetailViewModel(location: location))
                     } label: {
                         LocationCell(location: location)
                     }
