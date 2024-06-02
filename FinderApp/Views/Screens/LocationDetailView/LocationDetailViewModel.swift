@@ -11,6 +11,7 @@ import MapKit
 final class LocationDetailViewModel: ObservableObject {
     
     @Published var alertItem: AlertItem?
+    @Published var isShowingProfileModel = false
     
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
