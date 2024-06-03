@@ -5,8 +5,11 @@
 //  Created by Mustafa Bekirov on 29.05.2024.
 //  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
-import SwiftUI
 import MapKit
+import SwiftUI
+import CloudKit
+
+enum CheckInStatus { case checedIn, checkedOut }
 
 final class LocationDetailViewModel: ObservableObject {
     
@@ -38,5 +41,31 @@ final class LocationDetailViewModel: ObservableObject {
         }
         
         UIApplication.shared.open(url)
+    }
+    
+    func updateCheckInStatus(to checkInStatus: CheckInStatus) {
+        guard let profileRecordID = CloudKitManager.shared.profileRecordID else { return }
+        CloudKitManager.shared.fetchRecord(with: profileRecordID) { [self] result in
+            switch result {
+            case .success(let record):
+                switch checkInStatus {
+                case .checedIn:
+                    record[DDGProfile.kIsCheckedIn] = CKRecord.Reference(recordID: location.id, action: .none)
+                case .checkedOut:
+                    record[DDGProfile.kIsCheckedIn] = nil
+                }
+                
+                CloudKitManager.shared.save(record: record) { result in
+                    switch result {
+                    case .success(_):
+                        print("✅ Checked In/Out Successfully")
+                    case .failure(let failure):
+                        print("❌ Error saving record")
+                    }
+                }
+            case .failure(let failure):
+                print("❌ Error fetching record")
+            }
+        }
     }
 }

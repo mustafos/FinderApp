@@ -29,7 +29,7 @@ struct DDGLocation: Identifiable {
     let phoneNumber: String
     
     init(record: CKRecord) {
-        id  = record.recordID
+        id          = record.recordID
         name        = record[DDGLocation.kName] as? String ?? "N/A"
         description = record[DDGLocation.kDescription] as? String ?? "N/A"
         squareAsset = record[DDGLocation.kSquareAsset] as? CKAsset
