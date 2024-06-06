@@ -45,25 +45,39 @@ struct LocationDetailView: View {
                             LocationActionButton(color: .brandPrimary, imageName: "phone.fill")
                         }
                         
-                        Button {
-                            viewModel.updateCheckInStatus(to: viewModel.isCheckedIn ? .checkedOut : .checedIn)
-                        } label: {
-                            LocationActionButton(color: .brandPrimary, imageName: "person.fill.checkmark")
+                        if let _ = CloudKitManager.shared.profileRecordID {
+                            Button {
+                                viewModel.updateCheckInStatus(to: viewModel.isCheckedIn ? .checkedOut : .checedIn)
+                            } label: {
+                                LocationActionButton(color: viewModel.isCheckedIn ? .grubRed : .brandPrimary,
+                                                     imageName: viewModel.isCheckedIn ? "person.fill.xmark" : "person.fill.checkmark")
+                            }
                         }
                     }
                 }.padding(.horizontal)
                 
                 Text("Who's Here?").americanFont(size: 20)
                 
-                ScrollView {
-                    LazyVGrid(columns: viewModel.columns, content: {
-                        ForEach(viewModel.checkedInProfiles) { profile in
-                            FirstNameAvatarView(profile: profile)
-                                .onTapGesture {
-                                    viewModel.isShowingProfileModel = true
+                ZStack {
+                    if viewModel.checkedInProfiles.isEmpty {
+                        Text("Nobidy's Here 🥺")
+                            .americanFont(size: 20)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 30)
+                    } else {
+                        ScrollView {
+                            LazyVGrid(columns: viewModel.columns, content: {
+                                ForEach(viewModel.checkedInProfiles) { profile in
+                                    FirstNameAvatarView(profile: profile)
+                                        .onTapGesture {
+                                            viewModel.isShowingProfileModel = true
+                                        }
                                 }
+                            })
                         }
-                    })
+                    }
+                    
+                    if viewModel.isLoading { LoadingView() }
                 }
                 Spacer()
             }
@@ -82,7 +96,10 @@ struct LocationDetailView: View {
                     .zIndex(2)
             }
         }
-        .onAppear { viewModel.getCheckedInProfiles() }
+        .onAppear {
+            viewModel.getCheckedInProfiles()
+            viewModel.getCheckedInStatus()
+        }
         .alert(item: $viewModel.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
@@ -118,7 +135,6 @@ struct LocationActionButton: View {
 }
 
 struct FirstNameAvatarView: View {
-    
     var profile: DDGProfile
     
     var body: some View {
