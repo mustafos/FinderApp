@@ -5,7 +5,6 @@
 //  Created by Mustafa Bekirov on 24.04.2024.
 //  Copyright © 2024 Mustafa Bekirov. All rights reserved.
 
-import Foundation
 import SwiftUI
 
 typealias TextExtension = Text
