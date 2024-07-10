@@ -72,9 +72,9 @@ final class ProfileViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         switch result {
                         case .success(_):
-                            isCheckedIn = false
+                            self.isCheckedIn = false
                         case .failure(_):
-                            alertItem = AlertContext.unableToCheckInOrOut
+                            self.alertItem = AlertContext.unableToCheckInOrOut
                         }
                     }
                 }
